@@ -3,8 +3,8 @@
 namespace Wharfs\UISPApiClient;
 
 use Exception;
-use Wharfs\UISPApiClient\Services\Concerns\HasFake;
 use UNMS_API\Client as UISP;
+use Wharfs\UISPApiClient\Services\Concerns\HasFake;
 
 class UISPApiClient
 {
@@ -15,19 +15,19 @@ class UISPApiClient
     ) {
     }
 
-    
     public function getSites()
     {
         try {
             $unms_connection = new UISP($this->config['user'], $this->config['password'], $this->config['host'] . ':' . $this->config['port'], $this->config['verifyssl']);
             $debug_mode = $unms_connection->set_debug($this->config['debug']);
             $loggedIn = $unms_connection->login();
-            if ($loggedIn == TRUE) {
+            if ($loggedIn == true) {
                 $sites = $unms_connection->getAllSites();
             }
         } catch (exception $e) {
             echo "Failed to connect to UISP Controller";
         }
+
         return $sites;
     }
 
@@ -37,12 +37,13 @@ class UISPApiClient
             $unms_connection = new UISP($this->config['user'], $this->config['password'], $this->config['host'] . ':' . $this->config['port'], $this->config['verifyssl']);
             $debug_mode = $unms_connection->set_debug($this->config['debug']);
             $loggedIn = $unms_connection->login();
-            if ($loggedIn == TRUE) {
+            if ($loggedIn == true) {
                 $devices = $unms_connection->getDevices($id);
             }
         } catch (exception $e) {
             echo "Failed to connect to UISP Controller";
         }
+
         return $devices;
     }
 

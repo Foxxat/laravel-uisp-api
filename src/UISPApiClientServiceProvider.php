@@ -10,11 +10,11 @@ use Wharfs\UISPApiClient\UISPApiClient as Client;
 
 class UISPApiClientServiceProvider extends ServiceProvider
 {
- /**
-     * Bootstrap the application services.
-     *
-     * @return void
-     */
+    /**
+        * Bootstrap the application services.
+        *
+        * @return void
+        */
     public function boot()
     {
         //
@@ -57,6 +57,4 @@ class UISPApiClientServiceProvider extends ServiceProvider
     //         ->hasMigration('create_laravel-uisp-api_table')
     //         ->hasCommand(UISPApiClientCommand::class);
     // }
-
-
 }
