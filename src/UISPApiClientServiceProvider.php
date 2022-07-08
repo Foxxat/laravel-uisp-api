@@ -31,7 +31,7 @@ class UISPApiClientServiceProvider extends ServiceProvider
         $this->app->singleton(Client::class, function ($app) {
             return new Client(
                 config: [
-                    "host" => config('uisp.config.url'),
+                    "host" => config('uisp.config.host'),
                     "port" => config('uisp.config.port'),
                     "user" => config('uisp.config.user'),
                     "password" => config('uisp.config.password'),
