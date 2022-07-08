@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Wharfs\UISPApiClient\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class UISPApiClientCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-uisp-api';
 
     public $description = 'My command';
 
